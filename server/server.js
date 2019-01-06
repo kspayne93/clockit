@@ -19,10 +19,11 @@ massive(CONNECTION_STRING).then((dbInstance) => {
 
 // ENDPOINTS
 
-// app.get(`/api/punches`, controller.getAll)
+app.get(`/api/punches`, controller.getAll) //uses req.body
 
-// app.post(`/api/punch`, controller.createItem)
+app.post(`/api/punch`, controller.createItem) //uses req.body
 
-// app.put(`/api/punch/:id`, controller.updateItem)
+app.delete(`/api/punch/:id`, controller.deleteItem) //uses req.params
 
-// app.delete(`/api/punch/:id`, controller.deleteItem)
+// app.put(`/api/punch/:id`, controller.updateItem) //uses req.params
+
