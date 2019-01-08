@@ -9,9 +9,9 @@ module.exports = {
 
    createItem: (req, res) => {
       const db = req.app.get('db')
-      let {punch_status, punch_date, punch_day, punch_time} = req.body //deconstructing incoming request properties off of body 
+      let {punch_status, punch_date, punch_day, punch_time, am_pm} = req.body //deconstructing incoming request properties off of body 
 
-      db.create_punch({punch_status, punch_date, punch_day, punch_time}).then(response => {
+      db.create_punch({punch_status, punch_date, punch_day, punch_time, am_pm}).then(response => {
          res.status(200).send(response) //adding new request properties to database, then sending response with updated database
       })
    },
