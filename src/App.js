@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import routes from './routes';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        
+      <div>
+        < Header />
+        { routes }
       </div>
-    );
+    )
   }
 }
 
-export default App;
+// https://github.com/bethtelford/simulation-timeclock
