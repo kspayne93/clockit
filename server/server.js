@@ -26,5 +26,4 @@ app.post(`/api/punch`, controller.createItem) //uses req.body
 
 app.delete(`/api/punch/:id`, controller.deleteItem) //uses req.params
 
-// app.put(`/api/punch/:id`, controller.updateItem) //uses req.params
-
+app.put(`/api/punch/:id`, controller.updateItem) //uses req.params

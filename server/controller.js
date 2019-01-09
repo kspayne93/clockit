@@ -25,5 +25,13 @@ module.exports = {
       })
    },
 
+   updateItem: (req, res) => {
+      const db = req.app.get('db')
+      let {id, punch_status, punch_date, punch_day, punch_time, am_pm} = req.params;
+
+      db.update_punch({id, punch_status, punch_date, punch_day, punch_time, am_pm}).then(response => {
+         res.status(200).send(response)
+      })
+   },
    
 }
